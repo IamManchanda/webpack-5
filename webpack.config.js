@@ -11,10 +11,13 @@ module.exports = (env, argv) => {
   };
 
   return {
-    entry: "./src/index.js",
+    entry: {
+      homePage: "./src/index.js",
+      aboutPage: "./src/about.js",
+    },
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
+      filename: "[name].bundle.js",
     },
     module: {
       rules: [

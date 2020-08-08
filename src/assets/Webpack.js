@@ -6,7 +6,7 @@ const rotate = keyframes`
     100% { transform: rotate(360deg); }
 `;
 
-const Page = styled.div`
+const PageStyled = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -16,16 +16,16 @@ const Page = styled.div`
   background-color: #000;
 `;
 
-const WebpackTitle = styled.h4`
+const WebpackTitleStyled = styled.h4`
   font-size: 3rem;
   font-weight: 500;
   color: #fff;
 `;
 
-export default function Webpack() {
-  return (
-    <Page>
-      <WebpackTitle>Webpack 5</WebpackTitle>
-    </Page>
-  );
-}
+const Webpack = () => (
+  <PageStyled>
+    <WebpackTitleStyled>Webpack 5</WebpackTitleStyled>
+  </PageStyled>
+);
+
+export default Webpack;

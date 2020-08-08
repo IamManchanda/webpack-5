@@ -3,14 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   const htmlConfig = {
-    title: "Webpack 5 App",
     filename: "index.html",
     inject: "body",
     scriptLoading: "defer",
     favicon: "favicon.ico",
-    meta: {
-      viewport: "width=device-width,initial-scale=1",
-    },
+    template: "./template.html",
   };
 
   return {

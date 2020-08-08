@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-const App = () => <div>Welcome to Webpack 5</div>;
-const rootElement = document.getElementById("root");
+import Webpack from "./assets/Webpack";
 
-render(<App />, rootElement);
+const rootElement = document.getElementById("root");
+render(<Webpack />, rootElement);

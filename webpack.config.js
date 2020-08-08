@@ -12,12 +12,11 @@ module.exports = (env, argv) => {
 
   return {
     entry: {
-      homePage: "./src/index.js",
-      aboutPage: "./src/about.js",
+      main: "./src/index.js",
     },
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "[name].bundle.js",
+      filename: "[name].[hash].bundle.js",
     },
     module: {
       rules: [
@@ -31,7 +30,14 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/,
-          use: ["file-loader"],
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[name].[hash].[ext]",
+              },
+            },
+          ],
         },
       ],
     },

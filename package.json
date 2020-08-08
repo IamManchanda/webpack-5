@@ -8,7 +8,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "build:common": "rimraf dist && webpack",
+    "clean": "rimraf dist",
+    "build:common": "npm run clean && webpack",
     "build:prod": "npm run build:common -- --mode 'production'",
     "build:dev": "npm run build:common -- --mode 'development'"
   },

@@ -20,9 +20,7 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.(js|jsx)$/,
-          use: {
-            loader: "babel-loader",
-          },
+          use: "babel-loader",
         },
         {
           test: /\.css$/,

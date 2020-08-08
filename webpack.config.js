@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     inject: "body",
     scriptLoading: "defer",
     favicon: "favicon.ico",
-    template: "./template.html",
+    template: "./src/template.html",
   };
 
   return {

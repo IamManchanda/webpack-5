@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   const htmlConfig = {
@@ -34,13 +35,13 @@ module.exports = (env, argv) => {
             {
               loader: "file-loader",
               options: {
-                name: "[name].[hash].[ext]",
+                name: "static/images/[name].[hash].[ext]",
               },
             },
           ],
         },
       ],
     },
-    plugins: [new HtmlWebpackPlugin(htmlConfig)],
+    plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(htmlConfig)],
   };
 };

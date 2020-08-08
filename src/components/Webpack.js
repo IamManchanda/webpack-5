@@ -37,7 +37,7 @@ const WebpackLogoStyled = styled.img`
 const Webpack = () => (
   <PageStyled>
     <WebpackLogoStyled src={WebpackPng} />
-    <WebpackTitleStyled>Webpack 5</WebpackTitleStyled>
+    <WebpackTitleStyled>Webpack 5 App</WebpackTitleStyled>
   </PageStyled>
 );
 

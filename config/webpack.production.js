@@ -7,7 +7,6 @@ module.exports = merge(commonConfig, {
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerPort: 4000,
-      defaultSizes: "stat",
     }),
   ],
 });

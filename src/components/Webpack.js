@@ -36,10 +36,16 @@ const WebpackLogoStyled = styled.img`
 
 const Webpack = () => {
   const handleClick = () => {
-    const cloneDeep = import(/* webpackChunkName: "_cloneDeep" */ "lodash");
-    cloneDeep.then((res) => {
-      console.log(res);
-    });
+    import(/* webpackChunkName: "_cloneDeep" */ "lodash/cloneDeep").then(
+      ({ default: cloneDeep }) => {
+        const originalObject = {
+          prop1: "prop1",
+          prop2: "prop2",
+        };
+        const clonedObject = cloneDeep(originalObject);
+        console.log(clonedObject);
+      },
+    );
   };
 
   return (

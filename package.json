@@ -10,7 +10,8 @@
   "scripts": {
     "build:prod": "webpack --mode 'production'",
     "build:dev": "webpack --mode 'development'",
-    "serve:dev": "webpack-dev-server --open"
+    "serve:dev": "webpack-dev-server --open",
+    "clean": "rimraf dist/ && rimraf node_modules/ && npm install"
   },
   "browserslist": {
     "production": [
@@ -33,6 +34,7 @@
     "css-loader": "^4.2.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "rimraf": "3.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^5.0.0-beta.24",
     "webpack-cli": "^3.3.12",

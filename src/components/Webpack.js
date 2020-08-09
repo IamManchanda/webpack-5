@@ -34,11 +34,13 @@ const WebpackLogoStyled = styled.img`
   animation: ${rotate} linear 10s infinite;
 `;
 
-const Webpack = () => (
-  <PageStyled>
-    <WebpackLogoStyled src={WebpackPng} />
-    <WebpackTitleStyled>Webpack 5 App</WebpackTitleStyled>
-  </PageStyled>
-);
+const Webpack = () => {
+  return (
+    <PageStyled>
+      <WebpackLogoStyled src={WebpackPng} />
+      <WebpackTitleStyled>Webpack 5 App</WebpackTitleStyled>
+    </PageStyled>
+  );
+};
 
 export default Webpack;

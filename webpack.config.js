@@ -12,6 +12,12 @@ module.exports = (env, argv) => {
   };
 
   return {
+    devtool: "source-map",
+    devServer: {
+      contentBase: "./dist",
+      port: 5000,
+      clientLogLevel: "debug",
+    },
     entry: {
       main: "./src/index.js",
     },

@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build:prod": "webpack --mode 'production'",
-    "build:dev": "webpack --mode 'development'"
+    "build:dev": "webpack --mode 'development'",
+    "serve:dev": "webpack-dev-server --open"
   },
   "browserslist": {
     "production": [
@@ -34,6 +35,7 @@
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
     "webpack": "^5.0.0-beta.24",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

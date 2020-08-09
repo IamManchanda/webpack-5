@@ -6,7 +6,7 @@ module.exports = merge(commonConfig, {
   devtool: "source-map",
   devServer: {
     contentBase: "./dist",
-    port: 5000,
+    port: 3000,
     clientLogLevel: "debug",
   },
 });

@@ -8,7 +8,20 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "..", "dist"),
-    filename: "[name].[hash].bundle.js",
+    filename: "[name].[chunkhash].[hash].bundle.js",
+    chunkFilename: "[name].[chunkhash].[hash].bundle.js",
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
   },
   module: {
     rules: [

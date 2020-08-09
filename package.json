@@ -9,15 +9,15 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "clean:install": "rimraf dist/ && rimraf node_modules/ && npm install",
-    "build:dev": "webpack --config config/webpack.development.js",
+    "reboot:clean": "rimraf dist/ && rimraf node_modules/ && rimraf package-lock.json",
+    "reboot:install": "npm install",
+    "dev:serve": "webpack-dev-server --open --config config/webpack.development.js",
     "build:prod": "webpack --config config/webpack.production.js",
-    "build:analyze": "webpack --config config/webpack.analyze.js",
-    "serve:dev": "webpack-dev-server --open --config config/webpack.development.js",
-    "serve:prod": "serve dist/",
-    "analyze": "npm run clean:install && npm run build:analyze",
-    "dev": "npm run clean:install && npm run build:dev && npm run serve:dev",
-    "start": "npm run clean:install && npm run build:prod && npm run serve:prod"
+    "start:serve": "serve dist/",
+    "reboot": "npm run reboot:clean && npm run reboot:install",
+    "dev": "npm run dev:serve",
+    "build": "npm run build:prod",
+    "start": "npm run start:serve"
   },
   "browserslist": {
     "production": [

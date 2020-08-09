@@ -35,10 +35,21 @@ const WebpackLogoStyled = styled.img`
 `;
 
 const Webpack = () => {
+  const handleClick = () => {
+    const cloneDeep = import("lodash/cloneDeep");
+    const originalObject = {
+      prop1: "prop1",
+      prop2: "prop2",
+    };
+    const clonedObject = cloneDeep(originalObject);
+    console.log(clonedObject);
+  };
+
   return (
     <PageStyled>
       <WebpackLogoStyled src={WebpackPng} />
       <WebpackTitleStyled>Webpack 5 App</WebpackTitleStyled>
+      <button onClick={handleClick}>Click me</button>
     </PageStyled>
   );
 };

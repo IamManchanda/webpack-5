@@ -8,10 +8,13 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "build:prod": "webpack --mode 'production'",
-    "build:dev": "webpack --mode 'development'",
-    "serve:dev": "webpack-dev-server --open",
-    "clean": "rimraf dist/ && rimraf node_modules/ && npm install"
+    "clean:install": "rimraf dist/ && rimraf node_modules/ && npm install",
+    "build:dev": "webpack --config config/webpack.development.js",
+    "build:prod": "webpack --config config/webpack.production.js",
+    "serve:dev": "webpack-dev-server --open --config config/webpack.development.js",
+    "serve:prod": "serve dist/",
+    "dev": "npm run clean:install && npm run build:dev && npm run serve:dev",
+    "start": "npm run clean:install && npm run build:prod && npm run serve:prod"
   },
   "browserslist": {
     "production": [
@@ -35,9 +38,11 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "rimraf": "3.0.2",
+    "serve": "^11.3.2",
     "style-loader": "^1.2.1",
     "webpack": "^5.0.0-beta.24",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
   }
 }
